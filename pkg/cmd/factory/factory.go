@@ -30,6 +30,7 @@ import (
 	"k8s.io/client-go/tools/record"
 	"k8s.io/component-base/logs"
 	"k8s.io/klog/v2"
+	utilversion "k8s.io/apiserver/pkg/util/version"
 )
 
 // ControllerFlags provides the "normal" controller flags
@@ -131,6 +132,7 @@ func (c *ControllerCommandConfig) StartController(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
+	serverConfig.EffectiveVersion = utilversion.NewEffectiveVersion("v1.0.0")
 	serverConfig.HealthzChecks = append(serverConfig.HealthzChecks, c.healthChecks...)
 
 	server, err = serverConfig.Complete(nil).New(c.componentName, genericapiserver.NewEmptyDelegate())
