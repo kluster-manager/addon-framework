@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: verify
@@ -37,7 +37,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: verify-deps
@@ -52,7 +52,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: build
@@ -67,7 +67,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: unit
@@ -82,7 +82,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: integration
@@ -97,7 +97,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: install imagebuilder
@@ -105,7 +105,7 @@ jobs:
       - name: addon-examples-image # will build and tag the examples image
         run: imagebuilder --allow-pull -t quay.io/open-cluster-management/addon-examples:latest -t quay.io/ocm/addon-examples:latest -f ./build/Dockerfile.example .
       - name: setup kind
-        uses: engineerd/setup-kind@v0.6.2
+        uses: helm/kind-action@ef37e7f390d99f746eb8b610417061a60e82a6cc # v1.14.0
         with:
           version: v0.31.0
           name: cluster1
@@ -128,7 +128,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: install imagebuilder
@@ -136,7 +136,7 @@ jobs:
       - name: addon-examples-image # will build and tag the examples image
         run: imagebuilder --allow-pull -t quay.io/open-cluster-management/addon-examples:latest -t quay.io/ocm/addon-examples:latest -f ./build/Dockerfile.example .
       - name: setup kind
-        uses: engineerd/setup-kind@v0.6.2
+        uses: helm/kind-action@ef37e7f390d99f746eb8b610417061a60e82a6cc # v1.14.0
         with:
           version: v0.31.0
           name: cluster1
@@ -159,7 +159,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: install imagebuilder
@@ -167,7 +167,7 @@ jobs:
       - name: addon-examples-image # will build and tag the examples image
         run: imagebuilder --allow-pull -t quay.io/open-cluster-management/addon-examples:latest -t quay.io/ocm/addon-examples:latest -f ./build/Dockerfile.example .
       - name: setup kind
-        uses: engineerd/setup-kind@v0.6.2
+        uses: helm/kind-action@ef37e7f390d99f746eb8b610417061a60e82a6cc # v1.14.0
         with:
           version: v0.31.0
           name: cluster1
@@ -190,7 +190,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: install imagebuilder
@@ -198,7 +198,7 @@ jobs:
       - name: addon-examples-image # will build and tag the examples image
         run: imagebuilder --allow-pull -t quay.io/open-cluster-management/addon-examples:latest -t quay.io/ocm/addon-examples:latest -f ./build/Dockerfile.example .
       - name: setup kind
-        uses: engineerd/setup-kind@v0.6.2
+        uses: helm/kind-action@ef37e7f390d99f746eb8b610417061a60e82a6cc # v1.14.0
         with:
           version: v0.31.0
           name: cluster1
@@ -221,7 +221,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: install Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5.6.0
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: install imagebuilder
